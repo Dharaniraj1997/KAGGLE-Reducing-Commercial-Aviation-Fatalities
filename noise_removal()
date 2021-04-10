@@ -4,3 +4,108 @@ def noise_removal(noisy_data,Wn):
     N = 3
     B, A = signal.butter(N, Wn)
     return signal.filtfilt(B,A, noisy_data)
+
+w = 0.1 # cutoff frequency- 10*the maximum possible frequency (10Hz or 100 beats per minute)
+train['smoothened_ecg_data'] = noise_removal(train["ecg"],w) # Adding the smoothened data to the train dataset
+
+kaggle_test['smoothened_ecg_data'] = noise_removal(kaggle_test["ecg"],w) 
+
+# Noise Removal in GSR data
+
+w = 0.7 # cutoff frequency- 10*the maximum possible frequency (10Hz or 100 beats per minute)
+train['smoothened_gsr_data'] = noise_removal(train["gsr"],w) # Adding the smoothened data to the train dataset
+ 
+kaggle_test['smoothened_gsr_data'] = noise_removal(kaggle_test["gsr"],w) 
+
+# Noise Removal in Respiration data
+
+w = 0.7 # cutoff frequency- 10*the maximum possible frequency (10Hz or 100 beats per minute)
+train['smoothened_r_data'] = noise_removal(train["r"],w) # Adding the smoothened data to the train dataset
+
+kaggle_test['smoothened_r_data'] = noise_removal(kaggle_test["r"],w) 
+
+# Noise Removal in EEG data in TRAIN DATA
+
+w = 0.7 # cutoff frequency- 10*the maximum possible frequency (10Hz or 100 beats per minute)
+feats = ["eeg_fp1","eeg_f7","eeg_f8","eeg_t4","eeg_t6","eeg_t5","eeg_t3","eeg_fp2","eeg_o1","eeg_p3","eeg_pz","eeg_f3","eeg_fz","eeg_f4","eeg_c4","eeg_p4","eeg_poz","eeg_c3","eeg_cz","eeg_o2"]
+train['smoothened_eeg_fp1'] =  noise_removal(train['eeg_fp1'],w)# Adding the smoothened data to the train dataset
+
+train['smoothened_eeg_f7'] = noise_removal(train['eeg_f7'],w)
+
+train['smoothened_eeg_f8'] = noise_removal(train['eeg_f8'],w)
+
+train['smoothened_eeg_t4'] = noise_removal(train['eeg_t4'],w) 
+
+train['smoothened_eeg_t6'] = noise_removal(train['eeg_t6'],w)
+
+train['smoothened_eeg_t5'] = noise_removal(train['eeg_t5'],w)
+
+train['smoothened_eeg_t3'] = noise_removal(train['eeg_t3'],w)
+
+train['smoothened_eeg_fp2'] = noise_removal(train['eeg_fp2'],w) 
+
+train['smoothened_eeg_o1'] = noise_removal(train['eeg_o1'],w)
+
+train['smoothened_eeg_p3'] = noise_removal(train['eeg_p3'],w)
+
+train['smoothened_eeg_pz'] = noise_removal(train['eeg_pz'],w) 
+
+train['smoothened_eeg_f3'] = noise_removal(train['eeg_f3'],w)
+
+train['smoothened_eeg_fz'] = noise_removal(train['eeg_fz'],w)
+
+train['smoothened_eeg_f4'] = noise_removal(train['eeg_f4'],w)
+
+train['smoothened_eeg_c4'] = noise_removal(train['eeg_c4'],w)
+
+train['smoothened_eeg_p4'] = noise_removal(train['eeg_p4'],w)
+
+train['smoothened_eeg_poz'] = noise_removal(train['eeg_poz'],w)
+
+train['smoothened_eeg_c3'] = noise_removal(train['eeg_c3'],w)
+
+train['smoothened_eeg_cz'] = noise_removal(train['eeg_cz'],w)
+
+train['smoothened_eeg_o2'] = noise_removal(train['eeg_o2'],w)
+
+# Noise Removal in EEG data in TEST DATA
+
+kaggle_test['smoothened_eeg_fp1'] = noise_removal(kaggle_test['eeg_fp1'],w)
+
+kaggle_test['smoothened_eeg_f7'] = noise_removal(kaggle_test['eeg_f7'],w)
+
+kaggle_test['smoothened_eeg_f8'] = noise_removal(kaggle_test['eeg_f8'],w)
+
+kaggle_test['smoothened_eeg_t4'] = noise_removal(kaggle_test['eeg_t4'],w)
+
+kaggle_test['smoothened_eeg_t6'] = noise_removal(kaggle_test['eeg_t6'],w)
+
+kaggle_test['smoothened_eeg_t5'] = noise_removal(kaggle_test['eeg_t5'],w)
+
+kaggle_test['smoothened_eeg_t3'] = noise_removal(kaggle_test['eeg_t3'],w)
+
+kaggle_test['smoothened_eeg_fp2'] = noise_removal(kaggle_test['eeg_fp2'],w)
+
+kaggle_test['smoothened_eeg_o1'] = noise_removal(kaggle_test['eeg_o1'],w)
+
+kaggle_test['smoothened_eeg_p3'] = noise_removal(kaggle_test['eeg_p3'],w)
+
+kaggle_test['smoothened_eeg_pz'] = noise_removal(kaggle_test['eeg_pz'],w)
+
+kaggle_test['smoothened_eeg_f3'] = noise_removal(kaggle_test['eeg_f3'],w)
+
+kaggle_test['smoothened_eeg_fz'] = noise_removal(kaggle_test['eeg_fz'],w)
+
+kaggle_test['smoothened_eeg_f4'] = noise_removal(kaggle_test['eeg_f4'],w)
+
+kaggle_test['smoothened_eeg_c4'] = noise_removal(kaggle_test['eeg_c4'],w)
+
+kaggle_test['smoothened_eeg_p4'] = noise_removal(kaggle_test['eeg_p4'],w)
+
+kaggle_test['smoothened_eeg_poz'] = noise_removal(kaggle_test['eeg_poz'],w)
+
+kaggle_test['smoothened_eeg_c3'] = noise_removal(kaggle_test['eeg_c3'],w)
+
+kaggle_test['smoothened_eeg_cz'] = noise_removal(kaggle_test['eeg_cz'],w)
+
+kaggle_test['smoothened_eeg_o2'] = noise_removal(kaggle_test['eeg_o2'],w)
