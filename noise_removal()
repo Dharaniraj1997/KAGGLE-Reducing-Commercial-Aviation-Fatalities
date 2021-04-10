@@ -1,0 +1,6 @@
+import scipy.signal as signal
+# https://stackoverflow.com/questions/35588782/how-to-average-a-signal-to-remove-noise-with-python
+def noise_removal(noisy_data,Wn):
+    N = 3
+    B, A = signal.butter(N, Wn)
+    return signal.filtfilt(B,A, noisy_data)
