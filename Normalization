@@ -1,0 +1,105 @@
+# Normalizing the EEG features in TRAIN DATASET
+
+#df_train = pd.read_csv('E:/BOOKS_NEW/Cases datasets/1st/reducing-commercial-aviation-fatalities/train_after_smoothening.csv')
+df_train = train
+scaler = MinMaxScaler()
+df_train[['smoothened_eeg_fp1']] = scaler.fit_transform(df_train[['smoothened_eeg_fp1']])
+
+df_train[['smoothened_eeg_f7']] = scaler.fit_transform(df_train[['smoothened_eeg_f7']])
+
+df_train[['smoothened_eeg_f8']] = scaler.fit_transform(df_train[['smoothened_eeg_f8']])
+
+df_train[['smoothened_eeg_t6']] = scaler.fit_transform(df_train[['smoothened_eeg_t6']])
+
+df_train[['smoothened_eeg_t4']] = scaler.fit_transform(df_train[['smoothened_eeg_t4']])
+
+df_train[['smoothened_eeg_t5']] = scaler.fit_transform(df_train[['smoothened_eeg_t5']])
+
+df_train[['smoothened_eeg_t3']] = scaler.fit_transform(df_train[['smoothened_eeg_t3']])
+
+df_train[['smoothened_eeg_fp2']] = scaler.fit_transform(df_train[['smoothened_eeg_fp2']])
+
+df_train[['smoothened_eeg_o1']] = scaler.fit_transform(df_train[['smoothened_eeg_o1']])
+
+df_train[['smoothened_eeg_p3']] = scaler.fit_transform(df_train[['smoothened_eeg_p3']])
+
+df_train[['smoothened_eeg_pz']] = scaler.fit_transform(df_train[['smoothened_eeg_pz']])
+
+df_train[['smoothened_eeg_f3']] = scaler.fit_transform(df_train[['smoothened_eeg_f3']])
+
+df_train[['smoothened_eeg_fz']] = scaler.fit_transform(df_train[['smoothened_eeg_fz']])
+
+df_train[['smoothened_eeg_f4']] = scaler.fit_transform(df_train[['smoothened_eeg_f4']])
+
+df_train[['smoothened_eeg_c4']] = scaler.fit_transform(df_train[['smoothened_eeg_c4']])
+
+df_train[['smoothened_eeg_p4']] = scaler.fit_transform(df_train[['smoothened_eeg_p4']])
+
+df_train[['smoothened_eeg_poz']] = scaler.fit_transform(df_train[['smoothened_eeg_poz']])
+
+df_train[['smoothened_eeg_c3']] = scaler.fit_transform(df_train[['smoothened_eeg_c3']])
+
+df_train[['smoothened_eeg_cz']] = scaler.fit_transform(df_train[['smoothened_eeg_cz']])
+
+df_train[['smoothened_eeg_o2']] = scaler.fit_transform(df_train[['smoothened_eeg_o2']])
+
+# Normalizing the EEG features in TEST DATASET
+
+df_test = kaggle_test
+df_test[['smoothened_eeg_fp1']] = scaler.fit_transform(df_test[['smoothened_eeg_fp1']])
+
+df_test[['smoothened_eeg_f7']] = scaler.fit_transform(df_test[['smoothened_eeg_f7']])
+
+df_test[['smoothened_eeg_f8']] = scaler.fit_transform(df_test[['smoothened_eeg_f8']])
+
+df_test[['smoothened_eeg_t6']] = scaler.fit_transform(df_test[['smoothened_eeg_t6']])
+
+df_test[['smoothened_eeg_t4']] = scaler.fit_transform(df_test[['smoothened_eeg_t4']])
+
+df_test[['smoothened_eeg_t5']] = scaler.fit_transform(df_test[['smoothened_eeg_t5']])
+
+df_test[['smoothened_eeg_t3']] = scaler.fit_transform(df_test[['smoothened_eeg_t3']])
+
+df_test[['smoothened_eeg_fp2']] = scaler.fit_transform(df_test[['smoothened_eeg_fp2']])
+
+df_test[['smoothened_eeg_o1']] = scaler.fit_transform(df_test[['smoothened_eeg_o1']])
+
+df_test[['smoothened_eeg_p3']] = scaler.fit_transform(df_test[['smoothened_eeg_p3']])
+
+df_test[['smoothened_eeg_pz']] = scaler.fit_transform(df_test[['smoothened_eeg_pz']])
+
+df_test[['smoothened_eeg_f3']] = scaler.fit_transform(df_test[['smoothened_eeg_f3']])
+
+df_test[['smoothened_eeg_fz']] = scaler.fit_transform(df_test[['smoothened_eeg_fz']])
+
+df_test[['smoothened_eeg_f4']] = scaler.fit_transform(df_test[['smoothened_eeg_f4']])
+
+df_test[['smoothened_eeg_c4']] = scaler.fit_transform(df_test[['smoothened_eeg_c4']])
+
+df_test[['smoothened_eeg_p4']] = scaler.fit_transform(df_test[['smoothened_eeg_p4']])
+
+df_test[['smoothened_eeg_poz']] = scaler.fit_transform(df_test[['smoothened_eeg_poz']])
+
+df_test[['smoothened_eeg_c3']] = scaler.fit_transform(df_test[['smoothened_eeg_c3']])
+
+df_test[['smoothened_eeg_cz']] = scaler.fit_transform(df_test[['smoothened_eeg_cz']])
+
+df_test[['smoothened_eeg_o2']] = scaler.fit_transform(df_test[['smoothened_eeg_o2']])
+
+# Normalizing the SMOOTHENED ECG data of TRAIN AND TEST DATASET
+
+df_train[['smoothened_ecg_data']] = scaler.fit_transform(df_train[['smoothened_ecg_data']])
+
+df_test[['smoothened_ecg_data']] = scaler.fit_transform(df_test[['smoothened_ecg_data']])
+
+# Normalizing the SMOOTHENED R data of TRAIN AND TEST DATASET
+
+df_train[['smoothened_r_data']] = scaler.fit_transform(df_train[['smoothened_r_data']])
+
+df_test[['smoothened_r_data']] = scaler.fit_transform(df_test[['smoothened_r_data']])
+
+# Normalizing the SMOOTHENED GSR data of TRAIN AND TEST DATASET
+
+df_train[['smoothened_gsr_data']] = scaler.fit_transform(df_train[['smoothened_gsr_data']])
+
+df_test[['smoothened_gsr_data']] = scaler.fit_transform(df_test[['smoothened_gsr_data']])
