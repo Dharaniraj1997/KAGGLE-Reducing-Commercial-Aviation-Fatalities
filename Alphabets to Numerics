@@ -1,0 +1,23 @@
+# TRAIN DATA
+
+#EXPERIMENT and EVENTS features are in Alphabets,so we convert them into numericals.
+
+df_train['experiment'] = df_train['experiment'].map({'CA': 0, 'DA': 1, 'SS': 2, 'LOFT': 3})
+df_train["experiment"] = df_train["experiment"].astype('int8')
+df_train
+
+df_train['event'] = df_train['event'].map({'A': 0, 'B': 1, 'C': 2, 'D': 3})
+df_train["event"] = df_train["event"].astype('int8')
+df_train
+
+# TEST DATA
+
+#EXPERIMENT and EVENTS features are in Alphabets,so we convert them into numericals.
+
+df_train['experiment'] = df_train['experiment'].map({'CA': 0, 'DA': 1, 'SS': 2, 'LOFT': 3})
+df_train["experiment"] = df_train["experiment"].astype('int8')
+df_train
+
+df_train['event'] = df_train['event'].map({'A': 0, 'B': 1, 'C': 2, 'D': 3})
+df_train["event"] = df_train["event"].astype('int8')
+df_train
