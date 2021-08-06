@@ -11,3 +11,11 @@ Reducing Commercial Aviation Fatalities.ipynb
 Reducing Commercial Aviation Fatalities (1).pdf -> pdf FOR THE ABOVE IPYNB
 Untitled.ipynb 
 requirements.txt ->Libraries to be installed for executing the RCAF.py file.
+
+Related blog:
+
+https://dharanidhar-guntupallli.medium.com/reducing-commercial-aviation-fatalities-c6cdd1a8872f
+
+My profile:
+
+https://dharanidhar-guntupallli.medium.com/
